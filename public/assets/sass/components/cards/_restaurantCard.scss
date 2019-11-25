@@ -1,0 +1,22 @@
+.restaurant-card {
+  padding: 2vh 3vw;
+
+  &__details-box {
+    display: flex;
+  }
+
+  &__desc-box {
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2vw;
+  }
+
+  &__logo-box {
+    @include border-sm-radio;
+    img {
+      height: 10vh;
+      width: 20vw;
+    }
+  }
+}
