@@ -1,5 +1,6 @@
 import LRU from "lru-cache";
 import md5 from "md5";
+import axios, { AxiosRequestConfig } from "axios";
 
 enum Status {
   pending = "pending",
@@ -10,7 +11,7 @@ const cache = new LRU(50);
 
 export const useFetchSuspense = (
   url: string,
-  suspenseFetchOptions: RequestInit = {}
+  suspenseFetchOptions: AxiosRequestConfig = {}
 ) => {
   const key = `${url}.${md5(JSON.stringify(suspenseFetchOptions))}`;
 
@@ -23,7 +24,7 @@ export const useFetchSuspense = (
     return value.data;
   }
 
-  const promise = fetch(url, suspenseFetchOptions).then(res => res.json());
+  const promise = axios(url, suspenseFetchOptions).then(res => res.data);
 
   promise.then(data => {
     cache.set(key, { status: Status.resolved, data });

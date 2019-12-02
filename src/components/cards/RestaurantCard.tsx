@@ -3,6 +3,7 @@ import * as React from "react";
 import { CardBadge, BadgeTypes } from "../../components";
 import { Badge } from "../../abstract/apis/typings/restaurants";
 import { SnappFoodIndicator } from "../";
+import uuid from "uuid";
 const MultiImageLoader = React.lazy(() =>
   import("../loading/MultiImageLoader")
 );
@@ -25,7 +26,7 @@ export const RestaurantCard: React.FC<Props> = ({
   const renderBadges = () =>
     Array.isArray(badges) && badges.length
       ? badges.map((badge: Badge) => (
-          <CardBadge key={badge.title} bType={BadgeTypes.secondary}>
+          <CardBadge key={uuid.v4()} bType={BadgeTypes.secondary}>
             {badge.title}
           </CardBadge>
         ))
@@ -42,7 +43,7 @@ export const RestaurantCard: React.FC<Props> = ({
           <h4 className="restaurant-card__res-desc--secondary">{address}</h4>
         </div>
         <div className="restaurant-card__logo-box">
-          <React.Suspense fallback={SnappFoodIndicator}>
+          <React.Suspense fallback={<SnappFoodIndicator />}>
             <MultiImageLoader
               attr={{
                 src: logo,
