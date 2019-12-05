@@ -4,41 +4,42 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#ED0C6F" />
     <meta
       name="description"
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link rel="stylesheet" href="assets/main.css" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <title>
+      سفارش آنلاین غذا از بهترین رستوران ها و فست فود های تهران | اسنپ‌فود
+    </title>
+    <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+    <meta name="theme-color" content="#ED0C6F" />
+    <meta
+      name="keywords"
+      content="رستوران های تهران ،رستوران های مشهد ، رستوران های اصفهان ، رستوران های تبریز ،رستوران های کرج ،رستوران های اهواز ،
+                               نان سحر، سولدوش، عروس لبنان، شیرینی کوک، قنادی ناتلی، کوکی باکس، شیرینی پوپک، تارتلت، میلاوه‌،
+سفارش آنلاین کیک، سفارش آنلاین شیرینی، شیرینی خانگی، شیرینی ایرانی، شیرینی عربی، کیک، شیرینی، ژله، نان، خامه، دسر، شکلات،
+                رستوران های پردیس ،رستوران های شهریار ، رستوران های رشت ، رستوران های کاشان, رستوران , رستوران های تهران, لازانیا, تیرامیسو, دسر, شله زرد, انواع کباب, انواع ساندویچ, انواع پیتزا, سفارش اینترنتی غذای سنتی, غذای خانگی, غذای ایرانی, کباب, پیتزا, ساندویچ, رستوران, تهران, رستوران های, اینترنت, انلاین, سفارش آنلاین, سفارش غذا در ایران, ایران, غذاهای دریایی, غذا, سنتی, خانگی, ساندویچ های گرم, ساندویچ های سرد, پیتزا ایتالیایی, رستوران ایتالیایی, سفره خانه, رستوران های ایرانی, رستوران ایرانی, رستوران های فرنگی, رستوران فرنگی, خرید آنلاین, پرداخت آنلاین, شبکه رستوران ها, فست فود, فست فود, زود فود و اسنپ، اسنپ فود ، سرویس جدید اسنپ ، اسنپ غذا ، اسنپ سفارش غذا ، سفارش غذا در اسنپ ، ارسال غذا ، زودفود و اسنپ ، اسنپ فود ، اسنپفود،سفارش غذا با اسنپ"
+    />
+    <meta
+      name="description"
+      content="اسنپ فود سایت سفارش آنلاین غذا از بهترین رستوران های تهران، سفارش آنلاین کیک و شیرینی، سوپرمارکت آنلاین و سفارش آنلاین از کافی شاپ است."
+    />
+    <meta http-equiv="Accept-CH" content="DPR,Viewport-Width,Width" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="snappfood" content="snappfood" />
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>استفاده از این سرویس، برای دستگاه شما ممکن نیست</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/sw.js");
+    }
+  </script>
 </html>

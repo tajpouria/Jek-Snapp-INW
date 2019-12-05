@@ -9,10 +9,10 @@ enum Status {
 
 const cache = new LRU(50);
 
-export const useFetchSuspense = (
+export const useFetchSuspense = <res = any>(
   url: string,
   suspenseFetchOptions: AxiosRequestConfig = {}
-) => {
+): res => {
   const key = `${url}.${md5(JSON.stringify(suspenseFetchOptions))}`;
 
   const value: any = cache.get(key) || {

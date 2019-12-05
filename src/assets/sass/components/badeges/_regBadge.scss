@@ -1,0 +1,30 @@
+.badge {
+  height: 24px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 500;
+  margin-left: 8px;
+  padding: 5px 8px;
+
+  &--card {
+    background: $color-bg-tertiary;
+  }
+
+  &--rate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: $color-light;
+    font-size: 1.7rem;
+    height: 26px;
+    width: 40px;
+    line-height: 26px;
+    > p > span {
+      font-size: 1.4rem;
+    }
+  }
+}

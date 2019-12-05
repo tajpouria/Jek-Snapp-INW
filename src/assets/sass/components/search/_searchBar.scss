@@ -1,0 +1,37 @@
+.searchbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-light;
+  padding: 0 1rem;
+  height: 4.8rem;
+  border-radius: 6px;
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.1);
+  border: 0.5px solid #e6e6e6;
+
+  &__inp {
+    display: flex;
+    border: none;
+    outline: none;
+    flex: 1;
+    border-radius: 20px;
+    height: 3rem;
+    padding: 0 2rem;
+
+    @include placeholder {
+      font-family: iransans;
+      color: $color-light-grey;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__icon {
+    opacity: 0.6;
+    transition: 0.2s;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+}

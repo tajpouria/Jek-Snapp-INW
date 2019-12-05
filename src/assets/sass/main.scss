@@ -1,11 +1,18 @@
 @import "abstract/variables";
 @import "abstract/mixins";
-@import "abstract/animations";
+@import "abstract/functions";
 
+@import "base/animations";
 @import "base/base";
 @import "base/typography";
 @import "base/utilities";
 
+@import "layouts/header";
+@import "layouts/grid";
+
+@import "components/search/searchBar";
 @import "components/cards/restaurantCard";
+@import "components/badeges/regBadge";
+@import "components/loading/sfIndicator";
 
 @import "pages/restaurants";

@@ -1,5 +1,12 @@
 export enum RestaurantsAPIS {
-  GET_restaurants = "https://snappfood.ir/mobile/v2/restaurant/vendors-list?"
+  GET_restaurants = "https://snappfood.ir/mobile/v2/restaurant/vendors-list"
+}
+
+export interface RestaurantsFilter {
+  Filters: string[];
+  Sortings: string[];
+  Services: string[];
+  ExtraFilter: string[];
 }
 
 export interface RestaurantParams {
@@ -14,12 +21,7 @@ export interface RestaurantParams {
   showNoOrder?: number;
   client?: "JEK";
   optionalClient?: "JEK";
-  filters?: {
-    Filters: string[];
-    Sortings: string[];
-    Services: string[];
-    ExtraFilter: string[];
-  };
+  filters?: RestaurantsFilter;
 }
 
 export const fetchRestaurantsDefaultParams: RestaurantParams = {

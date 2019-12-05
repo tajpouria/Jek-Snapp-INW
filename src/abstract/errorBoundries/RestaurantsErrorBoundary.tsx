@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export class ErrorBoundary extends React.Component<
+export class RestaurantsErrorBoundary extends React.Component<
   any,
   { error: Error | null; errorInfo: React.ErrorInfo | null }
 > {

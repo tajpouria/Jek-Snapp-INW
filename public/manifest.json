@@ -1,25 +1,99 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "https://jek.snappfood.ir/icons/ios/icon_1024x1024.c64dde9e07f49fa8c44f1ce9a03a0a25.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
     },
     {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "src": "https://jek.snappfood.ir/icons/ios/icon_512x512.2c45210caddcc193cd710771508b4ed9.png",
+      "sizes": "512x512",
+      "type": "image/png"
     },
     {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "src": "https://jek.snappfood.ir/icons/ios/icon_256x256.6eb2e667029b2322b96813640c6123c3.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "https://jek.snappfood.ir/icons/ios/icon_192x192.6f8c41f56b28b2ce61201a9077961392.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://jek.snappfood.ir/icons/ios/icon_144x144.d15b522157ac63c54fe629d39a8e0078.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "https://jek.snappfood.ir/icons/ios/icon_96x96.08977ca3a94774ae1e02984e4e5726e7.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "https://jek.snappfood.ir/icons/ios/icon_72x72.367bb5fe2c32b6df431b16a7509a0b64.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "https://jek.snappfood.ir/icons/ios/icon_48x48.cfb205904d5de617cdcf3b612c9b8821.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "https://jek.snappfood.ir/icons/ios/icon_36x36.ec510465412d6fbfb1b2071d129fa80f.png",
+      "sizes": "36x36",
+      "type": "image/png"
+    },
+    {
+      "src": "https://jek.snappfood.ir/icon_512x512.2c45210caddcc193cd710771508b4ed9.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "https://jek.snappfood.ir/icon_256x256.6eb2e667029b2322b96813640c6123c3.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "https://jek.snappfood.ir/icon_192x192.6f8c41f56b28b2ce61201a9077961392.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://jek.snappfood.ir/icon_144x144.d15b522157ac63c54fe629d39a8e0078.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "https://jek.snappfood.ir/icon_96x96.08977ca3a94774ae1e02984e4e5726e7.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "https://jek.snappfood.ir/icon_72x72.367bb5fe2c32b6df431b16a7509a0b64.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "https://jek.snappfood.ir/icon_48x48.cfb205904d5de617cdcf3b612c9b8821.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "https://jek.snappfood.ir/icon_36x36.ec510465412d6fbfb1b2071d129fa80f.png",
+      "sizes": "36x36",
+      "type": "image/png"
     }
   ],
-  "start_url": ".",
+  "name": "@tajpouria/Snappfood",
+  "short_name": "@tajpouria/Snappfood",
+  "orientation": "portrait-primary",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "start_url": "/",
+  "description": "سفارش آنلاین غذا از بهترین رستوران ها و فست فودها",
+  "background_color": "#fafafa",
+  "theme_color": "#EC008C",
+  "Scope": "/",
+  "version": "4.7.0"
 }

@@ -1,2 +1,25 @@
-// borders
-$border-sm-radio: 0.1rem solid rgb(202, 189, 189);
+// COLORS
+$color-light-grey: #a3a3a3;
+$color-light: #fff;
+$color-dark: #404040;
+$color-bg-primary: #f3f3f3;
+$color-bg-secondary: #e6e6e6;
+$color-bg-tertiary: #ebebeb;
+
+// DIMENSIONS
+$dim-default-small: 64px;
+$grid-width: 114rem;
+$gutter-horizontal: 6rem;
+$gutter-vertical: 3rem;
+
+//FONTS
+@font-face {
+  font-family: "iransans";
+  src: url("../../@fonts/FontsFree-Net-ir_sans.ttf");
+}
+
+// FONT SIZES
+$default-font-size: 1.6rem;
+
+// BORDERS
+$border-primary: 0.5px solid $color-bg-secondary;

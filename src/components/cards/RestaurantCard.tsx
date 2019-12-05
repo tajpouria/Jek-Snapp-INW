@@ -1,12 +1,10 @@
 import * as React from "react";
+import v4 from "uuid/v4";
 
-import { CardBadge, BadgeTypes } from "../../components";
+import { CardBadge, RateBadge } from "../../components";
 import { Badge } from "../../abstract/apis/typings/restaurants";
-import { SnappFoodIndicator } from "../";
-import uuid from "uuid";
-const MultiImageLoader = React.lazy(() =>
-  import("../loading/MultiImageLoader")
-);
+import { SnappFoodIndicator } from "..";
+import { enToIRNumberConvertor } from "../../abstract/utility/fetch/commons";
 
 interface Props {
   children: {
@@ -14,54 +12,58 @@ interface Props {
     description: string;
     address: string;
     logo: string;
-    voteCount: number;
+    commentCount: string;
     rate: number;
     badges: Badge[];
   };
 }
 
-export const RestaurantCard: React.FC<Props> = ({
-  children: { title, description, address, logo, rate, voteCount, badges }
-}) => {
-  const renderBadges = () =>
-    Array.isArray(badges) && badges.length
-      ? badges.map((badge: Badge) => (
-          <CardBadge key={uuid.v4()} bType={BadgeTypes.secondary}>
-            {badge.title}
-          </CardBadge>
-        ))
-      : null;
+export const RestaurantCard: React.FC<Props> = React.memo(
+  ({
+    children: { title, description, address, logo, rate, commentCount, badges }
+  }) => {
+    const renderBadges = () =>
+      Array.isArray(badges) && badges.length
+        ? badges.map((badge: Badge) => (
+            <CardBadge key={v4()}>{badge.title}</CardBadge>
+          ))
+        : null;
 
-  return (
-    <section className="restaurant-card">
-      <div className="restaurant-card__details-box">
-        <div className="restaurant-card__desc-box">
-          <h4 className="restaurant-card__res-desc--secondary">{title}</h4>
-          <h4 className="restaurant-card__res-desc--secondary">
-            {description}
-          </h4>
-          <h4 className="restaurant-card__res-desc--secondary">{address}</h4>
-        </div>
-        <div className="restaurant-card__logo-box">
-          <React.Suspense fallback={<SnappFoodIndicator />}>
-            <MultiImageLoader
-              attr={{
-                src: logo,
-                alt: `لوگوی ${logo}`,
-                height: "30%",
-                width: "30%"
-              }}
-            />
-          </React.Suspense>
+    return (
+      <div className="restaurant-card">
+        <div className="restaurant-card__box">
+          <div className="restaurant-card__details-box">
+            <div>
+              <React.Suspense fallback={<SnappFoodIndicator />}>
+                <div
+                  className="restaurant-card__logo"
+                  style={{ backgroundImage: `url(${logo})` }}
+                />
+              </React.Suspense>
+            </div>
+            <div className="restaurant-card__desc-box">
+              <h3 className="restaurant-card__res-desc--primary typo typo--primary">
+                {title}
+              </h3>
+              <h5 className="restaurant-card__res-desc--secondary typo typo--secondary">
+                {description}
+              </h5>
+              <h5 className="restaurant-card__res-desc--secondary typo typo--secondary">
+                {address}
+              </h5>
+            </div>
+          </div>
+          <div className="restaurant-card__badge-box">
+            <div className="restaurant-card__badges">{renderBadges()}</div>
+            <div className="restaurant-card__rates">
+              <span className="restaurant-card__comments">
+                <span> {enToIRNumberConvertor(commentCount)}</span>نظر
+              </span>
+              <RateBadge rate={rate}>{enToIRNumberConvertor(rate)}</RateBadge>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="restaurant-card__badge-box">
-        <div className="restaurant-card__rates">
-          <CardBadge bType={BadgeTypes.primary}>{rate}</CardBadge>
-          <span className="restaurant-card__vote">رای{voteCount}</span>
-        </div>
-        <div className="restaurant-card__tags">{renderBadges()}</div>
-      </div>
-    </section>
-  );
-};
+    );
+  }
+);
